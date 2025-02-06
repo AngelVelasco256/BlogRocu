@@ -10,6 +10,7 @@ nav {
   display: flex;
   justify-content: center;
   background-color: rgb(19, 118, 231);
+  position:fixed; top:0
 }
 nav ul {
   height: 100%;
@@ -28,7 +29,101 @@ nav ul li a {
   font-size: 32px;
   color: white;
 }
+
+/* Main Section */
 main {
   width: 95%;
+  margin-left: 5%;
   display: grid;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left Section (Post) */
+.posts {
+  width: 50%;
+  margin: 12px;
+}
+.post_card {
+  margin: 12px;
+  border: solid 1px rgba(0, 0, 0, 0.329);
+  padding: 12px;
+}
+.post_details {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+.post_details h3 {
+  font-size: 32px;
+  margin: 0;
+}
+.post_details p {
+  margin: 0;
+}
+.post_details .author {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.post_card .post_content {
+  width: 100%;
+}
+.post_card .post_content p {
+  width: 90%;
+  margin: 12px 5%;
+  text-align: justify;
+}
+.post_card .post_content img{
+  object-fit: fill;
+  margin: 0 5%;
+  width: 90%;
+}
+.post_statistics {
+  margin: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: last baseline;
+}
+.post_statistics .like,
+.post_statistics .dislike,
+.post_statistics .watch,
+.post_statistics .comments {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.post_statistics .like a,
+.post_statistics .dislike a,
+.post_statistics .watch a,
+.post_statistics .comments a {
+  font-size: 12px;
+}
+
+/* Rigth Section (Activities) */
+.activities_day{
+  width: 50%;
+  margin: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 28px;
+  grid-row-gap: 28px;
+}
+.activities_day .calendar{
+  grid-area: 1 / 1 / 2 / 2;
+}
+.activities_day .activities{
+  grid-area: 1 / 2 / 2 / 3;
+}
+.activities_day .weather{
+  grid-area: 2 / 1 / 3 / 2;
+}
+.activities_day .forecast{
+  grid-area: 2 / 2 / 3 / 3;
 }
