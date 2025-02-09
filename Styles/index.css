@@ -6,6 +6,8 @@ body {
   background-size: cover;
   background-attachment: fixed;
   color: white;
+  font-family: "JetBrains Mono", serif;
+  font-style: normal;
 }
 nav {
   width: 5%;
@@ -99,17 +101,17 @@ main {
   margin: 0 5%;
   width: 90%;
 }
-.post_statistics {
+.post_card .post_statistics {
   margin: 12px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: last baseline;
 }
-.post_statistics .like,
-.post_statistics .dislike,
-.post_statistics .watch,
-.post_statistics .comments {
+.post_card .post_statistics .like,
+.post_card .post_statistics .dislike,
+.post_card .post_statistics .watch,
+.post_card .post_statistics .comments {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -118,7 +120,13 @@ main {
 .post_statistics .dislike a,
 .post_statistics .watch a,
 .post_statistics .comments a {
-  font-size: 12px;
+  font-size: 20px;
+}
+.post_statistics .like span,
+.post_statistics .dislike span,
+.post_statistics .watch span,
+.post_statistics .comments span {
+  font-size: 36px;
 }
 
 /* Rigth Section (Activities) */
