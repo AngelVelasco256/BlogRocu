@@ -2,6 +2,10 @@ body {
   margin: 0;
   display: flex;
   flex-direction: row;
+  background-image: url("https://i.imgur.com/RAV25ug.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
 }
 nav {
   width: 5%;
@@ -9,9 +13,12 @@ nav {
   margin: 0;
   display: flex;
   justify-content: center;
-  background-color: rgb(19, 118, 231);
   position:fixed;
-  top:0
+  top:0;
+  /* Glass efect */
+  background: rgba(255, 255, 255, 0.123);
+  box-shadow: 0 4px 30px rgb(0, 0, 0);
+  backdrop-filter: blur(16px);
 }
 nav ul {
   height: 100%;
@@ -28,14 +35,18 @@ nav ul li{
 nav ul li a {
   text-decoration: none;
   font-size: 32px;
-  color: white;
+  color: rgb(255, 255, 255);
+}
+nav ul li a:hover{
+  color: rgb(0, 112, 47);
 }
 
 /* Main Section */
 main {
   width: 95%;
   margin-left: 5%;
-  display: grid;
+  background: rgba(255, 255, 255, 0.103);
+  backdrop-filter: blur(8px);
 }
 .main {
   display: flex;
@@ -49,8 +60,12 @@ main {
 }
 .post_card {
   margin: 12px;
-  border: solid 1px rgba(0, 0, 0, 0.329);
   padding: 12px;
+}
+.post_card:hover{
+  backdrop-filter: blur(8px) saturate(50%);
+  background-color: rgba(255, 255, 255, 0.062);
+  border-radius: 8px;
 }
 .post_details {
   display: flex;
